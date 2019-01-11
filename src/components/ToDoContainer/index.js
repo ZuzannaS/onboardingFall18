@@ -5,7 +5,7 @@ import List from "./List";
 class ToDoContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {todos: [], todo: '', todosearch: '', id: 0, delate: 0};
+    this.state = {todos: [], todo: '', todosearch: '', id: 0};
   }
   handleChange=(event) =>{
     this.setState({todo: event.target.value});
@@ -21,7 +21,6 @@ handleSubmit=(event) =>{
   handleDelate=(id) =>{
     let newArr = this.state.todos;
     const index = newArr.map(e => e.id).indexOf(id);
-    console.log(id)
     newArr.splice( index, 1 );
     this.setState({todos: newArr})
   }
@@ -37,7 +36,7 @@ handleChangeSearch=(event) =>{
       <Search handleChangeSearch={this.handleChangeSearch} todosearch={this.state.todosearch}/>
       <h1>Current Todos:</h1>
       {(showing === 0) && (<h5>No Todos to complete </h5>)}
-      <List todos={this.state.todos} todosearch={this.state.todosearch} delate={this.state.delate} handleDelate={this.handleDelate}/>
+      <List todos={this.state.todos} todosearch={this.state.todosearch} handleDelate={this.handleDelate}/>
       </div>
     );
   }

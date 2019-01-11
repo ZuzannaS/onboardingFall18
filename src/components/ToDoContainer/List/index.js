@@ -16,7 +16,7 @@ class List extends Component {
   render() {
       console.log(this.props)
     return (
-        <NumberList todos={this.props.todos} handleDelate={this.props.handleDelate} todosearch={this.props.todosearch} search={this.props.search}/>
+        <NumberList todos={this.props.todos} handleDelate={this.props.handleDelate} todosearch={this.props.todosearch}/>
     );
   }
 }
