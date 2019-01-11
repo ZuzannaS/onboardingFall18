@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import {Input, Text} from './styles.js';
 
 class Search extends Component {
 
   render() {
     return (
       <div>
-        <label>
+        <Text>
             Search:
-            <input type="text" todosearch={this.props.todosearch} onChange={this.props.handleChangeSearch} />
-        </label>
+            <Input type="text" todosearch={this.props.todosearch} onChange={this.props.handleChangeSearch} ></Input> 
+        </Text>
       </div>
     );
   }
